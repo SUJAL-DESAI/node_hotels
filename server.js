@@ -2,10 +2,10 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const db = require('./db'); // Your database connection
-const menu = require('./models/MenuItem.js'); // Your Mongoose model
+require('dotenv').config(); // Load environment variables from .env file
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // ✅ Apply CORS FIRST — this is crucial
 app.use(cors({
@@ -27,8 +27,6 @@ app.use((req, res, next) => {
 app.get('/hi', (req, res) => {
   res.send('Welcome to the hotel!');
 });
-
-
 
 
 // 🔹 Import the router files
