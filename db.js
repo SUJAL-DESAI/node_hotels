@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config(); // Load environment variables from .env file
 
 // Define MongoDB connection URL and database name
-const mongoURL = process.env.MONGODB_URL; // Replace with your MongoDB connection string And database name mongodb://localhost:27017
+const mongoURL = process.env.MONGODB_URL; 
 
 // Connect to MongoDB
 mongoose.connect(mongoURL, {

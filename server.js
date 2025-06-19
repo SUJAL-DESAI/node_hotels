@@ -8,11 +8,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // ✅ Apply CORS FIRST — this is crucial
-app.use(cors({
-  origin: 'http://localhost:5173',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  credentials: true
-}));
+// app.use(cors({
+//   origin: 'http://localhost:5173',
+//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//   credentials: true
+// }));
 
 // ✅ Use bodyParser after CORS
 app.use(bodyParser.json());
